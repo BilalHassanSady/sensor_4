@@ -1,0 +1,15 @@
+int sen = A0;
+int led = 10;
+int val = 0;
+
+void setup()
+{
+  pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  val=analogRead(A0);
+  val=map(val,0,1000,0,255);
+  analogWrite(led,val);
+}
